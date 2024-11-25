@@ -1,0 +1,106 @@
+/* Header Styles */
+header {
+    background-color: #09d5e4;
+    color: white;
+    padding: 0,5rem 0;
+    text-align: center;
+}
+
+header img {
+    width: 60px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Existing CSS code */
+
+.berita-page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.berita-page-title {
+    font-size: 2em;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.berita-horizontal {
+    display: flex;
+    gap: 20px;
+}
+
+.berita-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 200px;
+}
+
+.berita-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.berita-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.berita-name {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.berita-date {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.berita-detail {
+    display: none;
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

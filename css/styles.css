@@ -1,0 +1,395 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #09d5e4;
+    color: white;
+    padding: 0,5rem 0;
+    text-align: center;
+}
+
+header img {
+    width: 60px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text {
+    background-size: 200% 200%;
+    background-clip: text;
+    color: #f4f4f4;
+    font-size: 3em; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Adjust the margin as needed */
+    text-shadow: 5px 5px 5px black;
+    -webkit-text-shadow: 5px  5px 10px rgba;
+}
+
+.hero-button {
+    background-color: #28a745;
+    color: #ffffff; /* Change the text color to white for better contrast */
+    text-align: center;
+    font-size: larger;
+    padding: 10px 20px; /* Add padding for better spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer
+}
+
+.kepsek-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #6eec33;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 95%; /* Full width */
+    max-width: 100%; /* Ensure it doesn't exceed full width */
+    margin: 20px 0; /* Add some vertical margin */
+    overflow: hidden; /* Ensure content stays within bounds */
+    position: relative; /* For animation purposes */
+}
+
+.kepsek-img {
+    max-width: 150px; /* Fixed width for the image */
+    width: 30%; /* Allow the image to resize */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 50%; /* Make the image circular */
+    animation: imgSlideIn 1s ease-out forwards;
+}
+
+.kepsek-text {
+    font-size: 1.5em;
+    color: #333;
+    animation: textFadeIn 2s ease-out forwards;
+    flex: 1; /* Allow the text to take remaining space */
+}
+
+/* Image slide-in animation */
+@keyframes imgSlideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Text fade-in animation */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Image slide-in animation */
+@keyframes imgSlideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Text fade-in animation */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.sambutan-container {
+    font-size: 0,5em;
+    line-height: 0,5;
+    text-align: justify;
+    white-space: pre-wrap; /* Preserve whitespace */
+    overflow: hidden; /* Hide the overflow */
+    border-right: .13em solid rgb(0, 0, 0); /* The typwriter cursor */
+    animation: blink-caret .75s step-end infinite; /* Blinking cursor */
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+/*bagian browser */
+.container {
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.news-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.news-box {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.news-box:hover {
+    transform: scale(1.05);
+}
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.news-content {
+    padding: 15px;
+}
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #333;
+}
+.news-title:hover {
+    color: #007bff;
+}
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+.news-meta i {
+    margin-right: 5px;
+}
+@keyframes backgroundAnimation {
+    0% { background-color: #e3f2fd; }
+    50% { background-color: #bbdefb; }
+    100% { background-color: #e3f2fd; }
+}
+.news-box {
+    animation: backgroundAnimation 3s infinite;
+}
+
+/*untuk lates galery*/
+
+.latest-activities-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.activities-box {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap; /* Ensure text doesn't wrap */
+    position: relative;
+    margin-bottom: 20px;
+    width: 80%; /* Adjust width for a smaller box */
+    margin: 0 auto 20px; /* Center the box and add bottom margin */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    height: 50px; /* Adjust height to match text size */
+}
+.activities-text {
+    display: inline-block;
+    padding-left: 100%; /* Start off-screen */
+    animation: scrollText 10s linear infinite;
+    font-size: 1.2em;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.activities-gallery {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Space between items */
+}
+
+.activity-item {
+    position: relative;
+    width: 30%; /* Adjust width as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.activity-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.activity-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.activity-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: opacity 0.3s ease;
+}
+
+.activity-item:hover .activity-caption {
+    opacity: 0.9; /* Slightly show the caption more on hover */
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #28a745;
+    color: white;
+}
+
+#contact p, #contact h2 {
+    color: white;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Carousel Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}

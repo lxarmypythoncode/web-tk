@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita TK Taswirul Afkar</title>
+    <link rel="stylesheet" href="css/berita.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="TK Taswirul Afkar Logo">
+        <nav>
+            <ul>
+                <li><a href="home.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="programs.html">Program</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="berita-page-container">
+        <p class="berita-page-title"></p>
+        <div class="berita-horizontal">
+            <div class="berita-box">
+                <img src="images/news1.jpg" alt="Berita 1" class="berita-img">
+                <p class="berita-name" onclick="showDetails('detail1')">Nama Informasi 1</p>
+                <p class="berita-date">Tanggal: 01-01-2024</p>
+                <p class="berita-detail" id="detail1">Detail berita 1...</p>
+            </div>
+            <div class="berita-box">
+                <img src="images/news2.jpg" alt="Berita 2" class="berita-img">
+                <p class="berita-name" onclick="showDetails('detail2')">Nama Informasi 2</p>
+                <p class="berita-date">Tanggal: 02-01-2024</p>
+                <p class="berita-detail" id="detail2">Detail berita 2...</p>
+            </div>
+            <div class="berita-box">
+                <img src="images/news3.jpg" alt="Berita 3" class="berita-img">
+                <p class="berita-name" onclick="showDetails('detail3')">Nama Informasi 3</p>
+                <p class="berita-date">Tanggal: 03-01-2024</p>
+                <p class="berita-detail" id="detail3">Detail berita 3...</p>
+            </div>
+            <!-- Add more berita-box divs as needed -->
+        </div>
+    </div>
+    <script src="js/berita.js"></script>
+</body>
+</html>
